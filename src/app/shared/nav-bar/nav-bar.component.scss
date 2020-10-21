@@ -1,0 +1,35 @@
+@import 'src/assets/styles/variables';
+
+mat-toolbar {
+  display: flex;
+}
+
+h1 {
+  outline: none;
+}
+
+.menu-icon {
+  display: none;
+}
+
+.spacer {
+  flex: 1;
+}
+
+a {
+  margin-right: 1rem;
+}
+
+@media screen and (max-width: $medium-screen) {
+  .navigation-actions, .spacer {
+    display: none;
+  }
+
+  .menu-icon {
+    display: block;
+  }
+
+  #logo {
+    margin: 0 auto;
+  }
+}

@@ -1,0 +1,53 @@
+<mat-toolbar color="primary">
+  <mat-icon (click)="toggleSideNav.emit()" class="menu-icon">menu</mat-icon>
+  <h1 routerLink="home" id="logo">eSports Universal News</h1>
+  <div class="spacer"></div>
+  <div class="navigation-actions">
+    <button mat-button routerLink="announcements">Announcements</button>
+
+    <button mat-button [matMenuTriggerFor]="events">Ranked Events</button>
+    <mat-menu #events="matMenu">
+      <button mat-menu-item routerLink="events">NA Ranked Events</button>
+      <button mat-menu-item routerLink="events">EU Ranked Events</button>
+      <button mat-menu-item routerLink="events">AS Ranked Events</button>
+      <button mat-menu-item routerLink="events">Become Ranked Event</button>
+    </mat-menu>
+
+    <button mat-button [matMenuTriggerFor]="teams">Teams</button>
+    <mat-menu #teams="matMenu">
+      <button mat-menu-item [matMenuTriggerFor]="na">North America</button>
+      <mat-menu #na="matMenu">
+        <button mat-menu-item routerLink="teams">Top 10</button>
+        <button mat-menu-item routerLink="teams">All Teams</button>
+      </mat-menu>
+
+      <button mat-menu-item [matMenuTriggerFor]="eu">Europe</button>
+      <mat-menu #eu="matMenu">
+        <button mat-menu-item routerLink="teams">Top 10</button>
+        <button mat-menu-item routerLink="teams">All Teams</button>
+      </mat-menu>
+
+
+      <button mat-menu-item [matMenuTriggerFor]="asian">Asian</button>
+      <mat-menu #asian="matMenu">
+        <button mat-menu-item routerLink="teams">Top 10</button>
+        <button mat-menu-item routerLink="teams">All Teams</button>
+      </mat-menu>
+    </mat-menu>
+
+    <button mat-button [matMenuTriggerFor]="streamers">Streamers</button>
+    <mat-menu #streamers="matMenu">
+      <button mat-menu-item routerLink="streamers">Event Streamers</button>
+      <button mat-menu-item routerLink="streamers">Featured Streamers</button>
+      <button mat-menu-item routerLink="streamers">All Streamers</button>
+    </mat-menu>
+
+    <button mat-button [matMenuTriggerFor]="about">About</button>
+    <mat-menu #about="matMenu">
+      <button mat-menu-item routerLink="about">Server</button>
+      <button mat-menu-item routerLink="about">Website</button>
+      <button mat-menu-item routerLink="about">Campaign</button>
+      <button mat-menu-item routerLink="about">Sponsorships</button>
+    </mat-menu>
+  </div>
+</mat-toolbar>

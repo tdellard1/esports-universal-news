@@ -1,0 +1,13 @@
+<h1>Top 10 NA Teams</h1>
+<mat-card class="team" *ngFor="let team of teams; index as index">
+  <h1>
+    #{{index + 1}}
+  </h1>
+
+  <h1>
+    {{team.name}}
+  </h1>
+
+  <img src="{{team.src}}" alt="loyal_monarchy"/>
+</mat-card>
+
