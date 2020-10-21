@@ -1,0 +1,11 @@
+@import '~@angular/material/theming';
+@import "variables";
+
+@include mat-core();
+
+$royal-theme-primary: mat-palette($primary);
+$royal-theme-accent: mat-palette($accent);
+
+$royal-app-theme: mat-light-theme($royal-theme-primary, $royal-theme-accent);
+
+@include angular-material-theme($royal-app-theme);

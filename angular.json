@@ -28,7 +28,8 @@
               "src/assets"
             ],
             "styles": [
-              "src/styles.scss"
+              "src/styles.scss",
+              "src/assets/styles/royal-theme.scss"
             ],
             "scripts": []
           },
@@ -123,6 +124,10 @@
           }
         }
       }
-    }},
-  "defaultProject": "esports-universal-news"
+    }
+  },
+  "defaultProject": "esports-universal-news",
+  "cli": {
+    "analytics": "98709427-658b-4396-9fe7-570974ee32e5"
+  }
 }

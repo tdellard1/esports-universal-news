@@ -1,0 +1,34 @@
+@import "src/assets/styles/mixins";
+@import "src/assets/styles/variables";
+
+app-nav-bar {
+  position: sticky;
+  top: 0;
+  left: 0;
+  right: 0;
+}
+
+mat-sidenav-content {
+  padding: 0 1rem ;
+
+  @include small-toolbar() {
+    height: calc(100vh - 56px);
+  }
+
+  @include large-toolbar() {
+    height: calc(100vh - 64px);
+  }
+
+  @media only screen and
+  (min-width: $medium) and
+  (max-width: $large) {
+    max-width: calc(768px - 2rem);
+    margin: 0 auto;
+  }
+
+  @media only screen and
+  (min-width: $large) {
+    max-width: calc(992px - 2rem);
+    margin: 0 auto;
+  }
+}

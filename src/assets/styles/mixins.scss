@@ -1,0 +1,32 @@
+@import "variables";
+
+@mixin small-toolbar() {
+  @media only screen and (max-width: $small-toolbar) {
+    @content;
+  }
+}
+
+@mixin large-toolbar() {
+  @media only screen and (min-width: $large-toolbar) {
+    @content;
+  }
+}
+
+@mixin extra-large-screen() {
+  @media only screen and (min-width: $extra-large) {
+    @content;
+  }
+}
+
+@mixin small-screen() {
+  @media only screen and
+  (max-width: $small) {
+    @content;
+  }
+}
+
+@mixin smaller-than($screen-size) {
+  @media only screen and (max-width: $screen-size - 1) {
+    @content
+  }
+}
