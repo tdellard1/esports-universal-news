@@ -7,7 +7,7 @@
 
     <button mat-button [matMenuTriggerFor]="events">Ranked Events</button>
     <mat-menu #events="matMenu">
-      <button mat-menu-item routerLink="events">NA Ranked Events</button>
+      <button mat-menu-item routerLink="events/ranked">NA Ranked Events</button>
       <button mat-menu-item routerLink="events">EU Ranked Events</button>
       <button mat-menu-item routerLink="events">AS Ranked Events</button>
       <button mat-menu-item routerLink="events">Become Ranked Event</button>
@@ -15,11 +15,7 @@
 
     <button mat-button [matMenuTriggerFor]="teams">Teams</button>
     <mat-menu #teams="matMenu">
-      <button mat-menu-item [matMenuTriggerFor]="na">North America</button>
-      <mat-menu #na="matMenu">
-        <button mat-menu-item routerLink="teams">Top 10</button>
-        <button mat-menu-item routerLink="teams">All Teams</button>
-      </mat-menu>
+      <button mat-menu-item routerLink="teams/na/teams">North America</button>
 
       <button mat-menu-item [matMenuTriggerFor]="eu">Europe</button>
       <mat-menu #eu="matMenu">
@@ -33,6 +29,10 @@
         <button mat-menu-item routerLink="teams">Top 10</button>
         <button mat-menu-item routerLink="teams">All Teams</button>
       </mat-menu>
+
+      <button mat-menu-item routerLink="teams">
+        <span>Register Ranked Teams</span>
+      </button>
     </mat-menu>
 
     <button mat-button [matMenuTriggerFor]="streamers">Streamers</button>
@@ -44,10 +44,10 @@
 
     <button mat-button [matMenuTriggerFor]="about">About</button>
     <mat-menu #about="matMenu">
-      <button mat-menu-item routerLink="about">Server</button>
-      <button mat-menu-item routerLink="about">Website</button>
-      <button mat-menu-item routerLink="about">Campaign</button>
-      <button mat-menu-item routerLink="about">Sponsorships</button>
+      <button mat-menu-item routerLink="about/server">Server</button>
+      <button mat-menu-item routerLink="about/website">Website</button>
+      <button mat-menu-item routerLink="about/campaign">Campaign</button>
+      <button mat-menu-item routerLink="about/sponsorships">Sponsorships</button>
     </mat-menu>
   </div>
 </mat-toolbar>

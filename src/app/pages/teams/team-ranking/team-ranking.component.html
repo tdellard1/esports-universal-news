@@ -1,13 +1,7 @@
-<h1>Top 10 NA Teams</h1>
-<mat-card class="team" *ngFor="let team of teams; index as index">
-  <h1>
-    #{{index + 1}}
-  </h1>
-
-  <h1>
-    {{team.name}}
-  </h1>
-
-  <img src="{{team.src}}" alt="loyal_monarchy"/>
-</mat-card>
-
+<h1>North American Teams</h1>
+<mat-button-toggle-group [(value)]="teamListDisplay">
+  <mat-button-toggle value="top">Top 10</mat-button-toggle>
+  <mat-button-toggle value="all">All Teams</mat-button-toggle>
+</mat-button-toggle-group>
+<app-team-list [teams]="topTeams" *ngIf="teamListDisplay == 'top'"></app-team-list>
+<app-team-list [teams]="allTeams" *ngIf="teamListDisplay == 'all'"></app-team-list>

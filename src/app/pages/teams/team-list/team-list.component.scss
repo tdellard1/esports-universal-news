@@ -1,13 +1,18 @@
-.event {
+.team {
   margin-bottom: 1rem;
   max-height: 100px;
   display: flex;
   justify-content: space-between;
   align-items: center;
   padding: 8px;
+  text-align: center;
 
   &:first-of-type {
     margin-top: 1rem;
+  }
+
+  &:hover {
+    background-color: darken(white, 5%);
   }
 }
 
@@ -17,11 +22,6 @@ img {
   align-self: flex-end;
 }
 
-mat-card > h1 {
+mat-card > h1:first-of-type {
   padding-left: 1rem;
-}
-
-.header {
-  text-align: center;
-  margin: 1rem;
 }

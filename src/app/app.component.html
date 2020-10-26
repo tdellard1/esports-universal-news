@@ -13,12 +13,12 @@
      </mat-list-item>
      <mat-menu #events="matMenu">
        <button mat-menu-item (click)="sidenav.toggle()" routerLink="events/ranked">
-         <s>NA Ranked Events</s>
+         <span>NA Ranked Events</span>
        </button>
-       <button mat-menu-item (click)="sidenav.toggle()" routerLink="events/ranked">
+       <button mat-menu-item (click)="sidenav.toggle()" routerLink="events">
          <s>EU Ranked Events</s>
        </button>
-       <button mat-menu-item (click)="sidenav.toggle()" routerLink="events/ranked">
+       <button mat-menu-item (click)="sidenav.toggle()" routerLink="events">
          <s>AS Ranked Events</s>
        </button>
        <button mat-menu-item (click)="sidenav.toggle()" routerLink="events">
@@ -31,17 +31,11 @@
        Teams
      </mat-list-item>
      <mat-menu #teams="matMenu">
-       <button mat-menu-item [matMenuTriggerFor]="na">
-         <s>North America</s>
+       <button mat-menu-item
+               (click)="sidenav.toggle()"
+               routerLink="teams/na/teams">
+         <span>North America</span>
        </button>
-       <mat-menu #na="matMenu">
-         <button mat-menu-item (click)="sidenav.toggle()" routerLink="teams/na">
-           <s>Top 10 Teams</s>
-         </button>
-         <button mat-menu-item (click)="sidenav.toggle()" routerLink="teams/na">
-           <s>All Teams</s>
-         </button>
-       </mat-menu>
 
        <button mat-menu-item [matMenuTriggerFor]="eu">
          <s>Europe</s>
@@ -93,17 +87,17 @@
        About
      </mat-list-item>
      <mat-menu #about="matMenu">
-       <button mat-menu-item (click)="sidenav.toggle()" routerLink="about#server">
-         <s>Server</s>
+       <button mat-menu-item (click)="sidenav.toggle()" routerLink="about/server">
+         Server
        </button>
-       <button mat-menu-item (click)="sidenav.toggle()" routerLink="about" fragment="company">
-         <s>Website</s>
+       <button mat-menu-item (click)="sidenav.toggle()" routerLink="about/website">
+         Website
        </button>
-       <button mat-menu-item (click)="sidenav.toggle()" routerLink="about">
-         <s>Campaign</s>
+       <button mat-menu-item (click)="sidenav.toggle()" routerLink="about/campaign">
+         Campaign
        </button>
-       <button mat-menu-item (click)="sidenav.toggle()" routerLink="about">
-         <s>Sponsorships</s>
+       <button mat-menu-item (click)="sidenav.toggle()" routerLink="about/sponsorships">
+         Sponsorships
        </button>
      </mat-menu>
    </mat-nav-list>

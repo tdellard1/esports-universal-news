@@ -9,7 +9,7 @@ const routes: Routes = [
     component: TeamsComponent
   },
   {
-    path: 'na',
+    path: ':region/teams',
     component: TeamRankingComponent
   }
 ];
